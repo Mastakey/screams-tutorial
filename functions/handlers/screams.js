@@ -38,7 +38,7 @@ exports.postOneScream = (req, res) => {
         .then(doc => {
             let resScream = newScream;
             resScream.screamId = doc.id;
-            res.json(resCream);
+            res.json(resScream);
         })
         .catch(err => {
             res.status(500).json({ error: "something went wrong" });
